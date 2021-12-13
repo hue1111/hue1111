@@ -177,8 +177,6 @@ var mc2tja = function() {
                 tja.prop('OFFSET', (-offset).toFixed(3));
                 tja.prop('DEMOSTART', '');
             }
-            tja.prop('SCOREMODE', 2);
-			tja.prop('GENRE', '\n');
             var course = this.getCourseFromName(mc.meta.version);
             var level = this.getLevelFromName(mc.meta.version);
             if (course == -1)

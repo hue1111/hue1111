@@ -175,7 +175,7 @@ var mc2tja = function() {
                 }
                 offset += (barBegin - lastBeat) * 60 / lastBPM;
                 tja.prop('OFFSET', (-offset).toFixed(3));
-                tja.prop('DEMOSTART', '');
+                tja.prop('DEMOSTART', '\n');
             }
             var course = this.getCourseFromName(mc.meta.version);
             var level = this.getLevelFromName(mc.meta.version);

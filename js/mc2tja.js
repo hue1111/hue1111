@@ -186,9 +186,8 @@ var mc2tja = function() {
 
             tja.prop('COURSE', course);
             tja.prop('LEVEL', star);
+            // don't forget the balloons!
 
-            tja.prop('SCOREINIT', '');
-            tja.prop('SCOREDIFF', '');
 
             // Second: group notes in segments
             // Third: add events according to time points, scaling segments if necessary
@@ -400,10 +399,11 @@ var mc2tja = function() {
             }
 
             // TODO: add #BARLINEOFF & #BARLINEON events according to barBegin
+			tja.prop('BALLOON', balloons.join(','));
+            tja.prop('SCOREINIT', '');
+            tja.prop('SCOREDIFF', '');
+			tja.prop('NOTESDESIGNER'+course, mc.meta.creator);
 
-            // don't forget the balloons!
-            if (balloons.length > 0)
-                tja.prop('BALLOON', balloons.join(','));
 
             // Finally: just generate!
 
